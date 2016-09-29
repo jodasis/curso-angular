@@ -11,5 +11,6 @@ angular.module('uiApp')
       vm.show = !vm.show;
       return vm.show;
     };
+    vm.switch = 'admina';
     
   });

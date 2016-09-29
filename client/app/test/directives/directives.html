@@ -29,18 +29,17 @@
     </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div ng-switch="vm.message">
+  <div ng-switch-when="admin">
+    <h1>Hola Admin</h1>
+  </div>
+  <div ng-switch-when="user">
+    <h1>Hola User</h1>
+  </div>
+  <div ng-switch-when="outhor">
+    <h1>Hola Outhor</h1>
+  </div>
+  <div ng-switch-default>
+    <h1>Default</h1>
+  </div>
+</div>
