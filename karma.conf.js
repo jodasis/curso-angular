@@ -20,6 +20,9 @@ module.exports = function(config) {
       'client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
+      'client/bower_components/ng-table/dist/ng-table.js',
+      'client/bower_components/angular-ui-grid/ui-grid.js',
+      'client/bower_components/angular-ui-grid/ui-grid.min.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',

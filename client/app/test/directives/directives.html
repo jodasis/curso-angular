@@ -1,10 +1,9 @@
 <input type="text" ng-model="vm.message">
-<div class="alert" 
-     ng-class="{'alert-info':vm.message === 'info',
+<div class="alert" ng-class="{'alert-info':vm.message === 'info',
                'alert-danger':vm.message === 'danger',
                'alert-success': vm.message === 'success',
                'my-style': vm.message == 'test'}">
-{{vm.message}}    
+  {{vm.message}}
 </div>
 
 <div>Message: {{vm.message}}</div>
@@ -19,16 +18,17 @@
 <img ng-src="{{vm.message}}">
 
 <div>
-    <a href="" ng-click="vm.showMenu()">
+  <a href="" ng-click="vm.showMenu()">
         Show Menu: {{vm.show}}
     </a>
-    <ul ng-show="vm.show">
-       <li>1</li>
-       <li>2</li>
-       <li>3</li>
-    </ul>
+  <ul ng-show="vm.show">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
 </div>
 
+<!--div ng-switch="vm.getAccess()"-->
 <div ng-switch="vm.message">
   <div ng-switch-when="admin">
     <h1>Hola Admin</h1>
@@ -43,3 +43,35 @@
     <h1>Default</h1>
   </div>
 </div>
+
+<span ng-bind="vm.message"></span>
+
+<my-input></my-input>
+<div my-input='asd'></div>
+<div class="my-input"></div>
+
+<p> Todate's date: {{ vm.timeNow }} </p>
+<p> Todate's date: {{ vm.timeNow | date:'dd-MM-yyyy' }} </p>
+
+<p>{{vm.myObject | json}}</p>
+
+<input type="number" ng-model="vm.price">
+<p>{{vm.price | currency}}</p>
+<p>{{vm.price | currency: 'Bs:'}}</p>
+<p>{{vm.price | currency: 'Bs:':0}}</p>
+
+<ul>
+  <li ng-repeat="user in vm.users | limitTo:2">
+    {{ user.age }}
+    {{ user.name }}
+  </li>
+</ul>
+orderBy:
+<ul>
+  <li ng-repeat="user in vm.users | orderBy:'age'">
+    {{ user.age }}
+    {{ user.name }}
+  </li>
+</ul>
+filtro:<br>
+{{ vm.cadena | myFilter:'m' }}
