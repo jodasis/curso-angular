@@ -18,7 +18,7 @@ export function getAll(req, res) {
     }
     res.json(obj);
   });
-};
+}
 export function get(req, res) {
   jsonfile.readFile(FILE, function (err, obj) {
     var array = lodash.find(obj.courses, function (course) {
@@ -29,4 +29,4 @@ export function get(req, res) {
     }
     res.json(array);
   });
-};
+}
